@@ -4,5 +4,5 @@ version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
     "cross-inertia>=0.18.0",
-    "fastapi[standard]>=0.136.1",
+    "fastapi[standard]>=0.141.1",
 ]
