@@ -1,10 +1,9 @@
 from cross_inertia.fastapi import InertiaDep
 from cross_inertia.fastapi.experimental import inertia_lifespan
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(lifespan=inertia_lifespan)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.frontend("/static", directory="static", fallback=None)
 
 
 @app.get("/")
